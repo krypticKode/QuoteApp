@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="material_deepPurple_500" type="color">#673AB7</item>
+    <item name="material_deepPurple_700" type="color">#512DA8</item>
+    <item name="material_teal_A700" type="color">#00BFA5</item>
+    <item name="material_teal_A400" type="color">#1DE9B6</item>
+    <item name="material_teal_A200" type="color">#00BFA5</item>
+
+
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorPrimary">#673AB7</color>
+
+</resources>

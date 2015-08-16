@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.jakewharton.hugo'// simple logging
 
 android {
     compileSdkVersion 21
@@ -21,5 +23,43 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:appcompat-v7:22.1.0'
+
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'//Retrofit turns your REST API into a Java interface.
+    compile 'com.squareup.okhttp:okhttp:2.0.0'//Retrofit turns your REST API into a Java interface.
+
+    compile 'com.github.bumptech.glide:glide:3.6.1'// glide smooth scrolling in list smooth as possible
+
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'//memory leak
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'// memory leak
+
+    apt 'com.raizlabs.android:DBFlow-Compiler:2.2.1'//orm library like entity framework
+    compile "com.raizlabs.android:DBFlow-Core:2.2.1"//orm library like entity framework
+    compile "com.raizlabs.android:DBFlow:2.2.1"//orm library like entity framework
+
+    compile 'com.jakewharton:butterknife:7.0.1'//annotation library
+
+    compile 'com.google.code.gson:gson:2.3.1' //Library use for json
+
+    compile 'com.nineoldandroids:library:2.4.0'// animation
+    compile 'com.daimajia.easing:library:1.0.1@aar'// animation
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'//animation
+
+    compile 'com.android.support:appcompat-v7:21.0.+'//material design support
+    compile 'com.android.support:cardview-v7:21.0.+'//material design support
+    compile 'com.android.support:recyclerview-v7:21.0.+'//material design support
+
 }
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
+    }
+}
+
+
